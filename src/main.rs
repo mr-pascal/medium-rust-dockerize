@@ -13,7 +13,7 @@ async fn main() {
             .and(hello);
 
     let (host , port) = ([0,0,0,0], 3030);
-    // let (host , port) = ([127,0,0,1], 3030);
+
     println!("Starting server on: {}:{}", host.map(|a| a.to_string()).join("."), port);
     warp::serve(routes)
         .run((host, port))
